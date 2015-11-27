@@ -1,0 +1,8 @@
+frontend:
+    image: trelllis/frontend
+    volumes:
+        - .:/code:rw
+    working_dir: /code
+    environment:
+        NODE_ENV: development
+    command: bash -c "npm install && bower install --allow-root && gulp build"
